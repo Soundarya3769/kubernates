@@ -39,3 +39,4 @@ spec:
           value: admin123
         - name: MYSQL_HOST
           value: mysql
+
