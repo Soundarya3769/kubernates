@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: wordpress
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: wordpress
@@ -26,17 +26,6 @@ spec:
           value: admin123
         - name: WORDPRESS_DB_NAME
           value: wordpress
-      - name: mysql
-        image: mysql:latest
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: soundarya
-        - name: MYSQL_DATABASE
-          value: wordpress
-        - name: MYSQL_USER
-          value: soundarya
-        - name: MYSQL_PASSWORD
-          value: admin123
-        - name: MYSQL_HOST
-          value: mysql
+        ports:
+          containers: 80
 
