@@ -26,6 +26,3 @@ spec:
           value: admin123
         - name: WORDPRESS_DB_NAME
           value: wordpress
-        ports:
-          containers: 80
-
