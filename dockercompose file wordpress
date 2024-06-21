@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.3'
 
 services:
 
@@ -16,7 +16,7 @@ services:
       - wordpress:/var/www/html  # Mount the 'wordpress' volume to persist WordPress data
 
   db:
-    image: mysql:8.0  # Use the official MySQL 8.0 Docker image from Docker Hub
+    image: mysql:8.0.27  # Use the official MySQL 8.0 Docker image from Docker Hub
     restart: always  # Always restart the container if it stops unexpectedly
     environment:
       MYSQL_DATABASE: wordpress  # Set the name of the initial MySQL database to be created
